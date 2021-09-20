@@ -9,7 +9,7 @@ function Tweet() {
     const [items, setItems] = useState([]);
 
     const fetchItems = async () => {
-        const data = await fetch('/tweets');
+        const data = await fetch('/gettweets');  // /gettweets and /adtweet is running on port of backend
         const items = await data.json();
         setItems(items);
     };
